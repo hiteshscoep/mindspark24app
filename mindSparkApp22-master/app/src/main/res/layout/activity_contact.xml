@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_500"
+    tools:context="org.coepmindspark.mindspark.Contact">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/contact_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contact_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/contact_coverimg"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/contactgrd"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="-150dp"
+                app:srcCompat="@drawable/gradient_bg" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="-100dp"
+                android:backgroundTint="#77FFFFFF"
+                app:cardCornerRadius="75dp">
+
+                <ImageView
+                    android:id="@+id/contact_logo"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="2dp" />
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2"
+                app:srcCompat="@drawable/mindsparklogo"
+                android:layout_marginBottom="10dp"/>
+
+
+            <EditText
+                android:id="@+id/EmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/random_bg"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="16dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#CCFFFFFF"
+                android:textSize="18sp"
+                tools:ignore="TouchTargetSizeCheck"
+                android:textCursorDrawable="@drawable/text_cursor"/>
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/random_bg"
+                android:hint="Name"
+                android:inputType="text"
+                android:padding="16dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#CCFFFFFF"
+                android:textSize="18sp"
+                tools:ignore="TouchTargetSizeCheck"
+                android:textCursorDrawable="@drawable/text_cursor"/>
+
+
+            <EditText
+                android:id="@+id/message"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/random_bg"
+                android:hint="Message"
+                android:inputType="textMultiLine"
+                android:padding="16dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#CCFFFFFF"
+                android:textSize="18sp"
+                android:textCursorDrawable="@drawable/text_cursor"
+                android:minLines="5"
+                android:gravity="top|start"
+                android:maxLines="10"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scrollbars="vertical" />
+
+
+            <Button
+                android:id="@+id/contact_send_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#007FFF"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="send"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:cornerRadius="10dp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="all"
+                android:gravity="center"
+                android:linksClickable="true"
+                android:minHeight="48dp"
+                android:text="Visit Us On: mind-spark.org"
+                android:textColor="#FFFFFF"
+                android:textColorLink="#F1F1F1"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

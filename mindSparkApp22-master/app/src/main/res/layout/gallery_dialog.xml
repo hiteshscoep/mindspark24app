@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#000">
+
+
+    <ImageView
+        android:id="@+id/gallery_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H,3:2"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gallery_image">
+        <LinearLayout
+            android:id="@+id/linearLayout564"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="#000"
+            android:weightSum="2"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/share_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#4B4F59"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="Share"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#F8F8F8"
+                android:textScaleX="0.95"
+                android:textSize="16sp"
+                app:cornerRadius="7dp"
+                app:icon="@drawable/share"
+                app:iconGravity="textStart"
+                app:iconPadding="3dp"
+                app:iconSize="20dp"
+                app:iconTint="#f4f4f4" />
+
+            <Button
+                android:id="@+id/close_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autoText="false"
+                android:backgroundTint="#007FFF"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="Close"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#F4F4F4"
+                android:textScaleX="0.96"
+                android:textSize="16sp"
+                app:cornerRadius="7dp"
+                app:iconPadding="3dp"
+                app:iconSize="20dp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/dialog_animationView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gallery_image"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="loading_circle.json"
+        app:lottie_loop="true"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
